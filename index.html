@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a7b16399f3.js" crossorigin="anonymous"></script>
+    <!-- <script src="script.js " defer></script> -->
+    
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/Screenshot-(1).png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                
+                <h1>Hi, I am Aryan Gupta!</h1>
+                <p class="ptag">Front End Developer / Student</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/coder3.png" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me!</h1>
+                    <p>As a dedicated and innovative aspiring engineer, I possess a strong foundation in front-end technology and a relentless commitment to crafting exceptional user experiences. My passion for design, coding, and problem-solving is matched only by my dedication to staying at the forefront of emerging technologies. With attention to detail, adaptability, and a commitment to excellence, I'm eager to contribute my skills to shape the future of digital interactions.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills" >
+                        <ul>
+                            <li><span>C++</span></li>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>Javascript</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Virtual Internship - Let's Grow More</span><br>(October/22 - November/22)</li>
+                            <li><span>Virtual Workshop - IIIT Allahabad Blockchain Technology Course</span><br>(July/22 - August/22)</li>
+                            </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Bhagwan Parshuram Institute of Technology<br>(Batch of 2024)</span></li>
+                            <li><span>Happy School, Darya Ganj<br>(Senior Secondary - 81%)<br>(Secondary - 10 CGPA)</span></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/todolistnew.png">
+                <div class="layer">
+                    <h3>To-Do List</h3>
+                    <p>A to-do list app lets you write, organize, and reprioritize your tasks more efficiently.</p>
+                    <a href="https://to-do-list-omega-khaki.vercel.app/"><i class="fa-solid fa-link" style="color: #361f51;"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/netflixwhite.png">
+                <div class="layer">
+                    <h3>Netflix Clone</h3>
+                    <p>Netflix clone is an on-demand video streaming platform similar to Netflix.</p>
+                    <a href="https://netflix-clone-eight-alpha.vercel.app/"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/weatherdifferent2.png">
+                <div class="layer">
+                    <h3>Weather API App</h3>
+                    <p>A weather API is an Application Programming Interface that allows weather data to be queried from scripts and code. </p>
+                    <a href="https://weather-api-q8x6.vercel.app/"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/calculator-2.png">
+                <div class="layer">
+                    <h3>Calculator</h3>
+                    <p>A simple, functioning and responsive calculator made with the help of HTML, CSS and Javascript.</p>
+                    <a href="https://calculator-eta-rosy.vercel.app/"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i>aryan.gupta12077@gmail.com</p>
+                <p><i class="fa-solid fa-phone" style="color: #ffffff;"></i>9650217722</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/aryan-gupta-70264b249/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/Aryan12077"><i class="fa-brands fa-square-github"></i></a>
+                    
+                </div>
+                <a href="images/ARYAN's Resume (1).pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea> 
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Aryan Gupta</p>
+    </div>
+</div>
+    
+<script>
+    
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+// var links = document.querySelectorAll("."); 
+
+function opentab(tabname) {
+    for( tablink of tablinks) {
+        tablink.classList.remove("active-link");
+        
+    }
+    for( tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+        
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+var sidemenu = document.getElementById("sidemenu");
+function openmenu() {
+    sidemenu.style.right = "0";
+}
+function closemenu() {
+    sidemenu.style.right = "-200px";
+}
+
+</script>
+
+</body>
+</html>
