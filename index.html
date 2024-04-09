@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
     <link rel="stylesheet" href="styles.css">
+    
     <script src="https://kit.fontawesome.com/a7b16399f3.js" crossorigin="anonymous"></script>
-    <!-- <script src="script.js " defer></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
     
 </head>
 <body>
@@ -23,14 +25,16 @@
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
-            <div class="header-text">
+            <div class="moving-text">
                 
                 <h1>Hi, I am Aryan Gupta!</h1>
-                <p class="ptag">Front End Developer / Student</p>
+                <p>Front End Developer</p>
+                
             </div>
         </div>
     </div>
     
+
     
     <div id="about">
         <div class="container">
@@ -50,9 +54,9 @@
                     <div class="tab-contents active-tab" id="skills" >
                         <ul>
                             <li><span>C++</span></li>
-                            <li><span>HTML</span></li>
-                            <li><span>CSS</span></li>
+                            <li><span>HTML & CSS</span></li>
                             <li><span>Javascript</span></li>
+                            <li><span>React Js</span></li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
@@ -73,41 +77,65 @@
         </div>
     </div>
 
+            <div class="wrapper">
+            <div class="card">
+              <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+              </div>
+              <div class="text">HTML & CSS</div>
+            </div>
+            <div class="card js">
+              <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+              </div>
+              <div class="text">JavaScript</div>
+            </div>
+            <div class="card react">
+              <div class="circle">
+                <div class="bar"></div>
+                <div class="box"><span></span></div>
+              </div>
+              <div class="text">React JS</div>
+            </div>
+          </div>
+   
 
 <div id="portfolio">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
             <div class="work">
-                <img src="images/todolistnew.png">
+                <img src="images/brandbeet.png">
                 <div class="layer">
-                    <h3>To-Do List</h3>
-                    <p>A to-do list app lets you write, organize, and reprioritize your tasks more efficiently.</p>
-                    <a href="https://to-do-list-omega-khaki.vercel.app/"><i class="fa-solid fa-link" style="color: #361f51;"></i></a>
+                    <h3>Brandbeet</h3>
+                    <p>Strategic design solutions, that fuel your bottom line.</p>
+                    <a href="https://brandbeet2-0.vercel.app/"><i class="fa-solid fa-link" style="color: #361f51;"></i></a>
                 </div>
             </div>
             <div class="work">
-                <img src="images/netflixwhite.png">
+                <img src="images/pixel-art.png">
                 <div class="layer">
-                    <h3>Netflix Clone</h3>
-                    <p>Netflix clone is an on-demand video streaming platform similar to Netflix.</p>
-                    <a href="https://netflix-clone-eight-alpha.vercel.app/"><i class="fa-solid fa-link"></i></a>
+                    <h3>Pixel Art Generator</h3>
+                    <p>Transform your imagination into vibrant pixel masterpieces with ease using our intuitive pixel art generator app.</p>
+                    <a href="https://pixel-art-generator-henna.vercel.app/"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             <div class="work">
-                <img src="images/weatherdifferent2.png">
+                <img src="images/expense-tracker.png">
                 <div class="layer">
-                    <h3>Weather API App</h3>
-                    <p>A weather API is an Application Programming Interface that allows weather data to be queried from scripts and code. </p>
-                    <a href="https://weather-api-q8x6.vercel.app/"><i class="fa-solid fa-link"></i></a>
+                    <h3>Expense Tracker</h3>
+                    <p>Effortlessly manage your finances and track expenses on the go with our comprehensive expense tracker app. </p>
+                    <a href="https://expense-tracker-ebon-one.vercel.app/"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             <div class="work">
-                <img src="images/calculator-2.png">
+                <img src="images/snake.png">
                 <div class="layer">
-                    <h3>Calculator</h3>
-                    <p>A simple, functioning and responsive calculator made with the help of HTML, CSS and Javascript.</p>
-                    <a href="https://calculator-eta-rosy.vercel.app/"><i class="fa-solid fa-link"></i></a>
+                    <h3>Snake Game</h3>
+                    <p>Slither and strategize your way to high scores with our addictive snake game app, a classic reinvented for endless entertainment.</p>
+                    <a href="https://snake-game-theta-two.vercel.app/"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
         </div>
@@ -173,7 +201,32 @@ function closemenu() {
     sidemenu.style.right = "-200px";
 }
 
-</script>
+
+let options = {
+  startAngle: -1.55,
+  size: 150,
+  value: 0.85,
+  fill: { gradient: ['#a445b2', '#fa4299'] },
+  animation: { duration: 5000 } // Adjust duration as needed, 2000 milliseconds (2 seconds) used here
+};
+
+$(".circle .bar").circleProgress(options).on('circle-animation-progress', function(event, progress, stepValue) {
+  $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+});
+
+$(".js .bar").circleProgress({
+  value: 0.70,
+  animation: { duration: 5000 } // Adjust duration as needed
+});
+
+$(".react .bar").circleProgress({
+  value: 0.60,
+  animation: { duration: 5000 } // Adjust duration as needed
+});
+
+    </script>
+
+
 
 </body>
 </html>
